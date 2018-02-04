@@ -1,0 +1,27 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+kbd{
+	border: 1px solid blue;
+	display: inline-block;
+	width: 4em;
+	height: 4em;
+	text-transform: uppercase;
+}
+#main >div:nth-child(2){
+	margin-left: 2em;
+}
+#main > div:nth-child(3){
+	margin-left: 5em;
+}
+#main{
+	display: inline-block;
+	text-align: center;
+}
+main{
+	text-align: center;
+}
