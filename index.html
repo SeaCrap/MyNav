@@ -25,7 +25,10 @@
 		var hash = {
 			'q': 'http://qq.com','b': 'http://baidu.com','z': 'http://zhihu.com'
 		}
-
+		var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
+		if(hashInLocalStorage){
+				hash = hashInLocalStorage
+			}
 		index1 = 0
 		while(index1 < keys['length']){
 			div = document.createElement('div')
@@ -35,11 +38,30 @@
 			while(index2 < row['length']){
 				kbd = document.createElement('kbd')
 				kbd.textContent = row[index2]
+				button = document.createElement('button')
+				button.textContent = '编辑'
+				button.id = row[index2]
+				button.onclick = function(xzkjcnxlkcjlk){
+					key = (xzkjcnxlkcjlk['target']['id'])
+					x = prompt('编辑一个网址加入收藏')
+					hash[key] = x
+					localStorage.setItem('zzz',JSON.stringify(hash))
+					console.log(hash)
+				}
+				kbd.appendChild(button)
 				div.appendChild(kbd)
 				index2 = index2+1
 			}
 			index1 = index1 + 1
 		}
+
+		document.onkeypress = function(xzkjcnxlkcjlk){
+			key = xzkjcnxlkcjlk['key']
+		 	website = hash[key]
+			console.log(website)
+			// location.href = website
+			window.open( website,'_blank')
+		}	
 	</script>
 </body>
 </html>

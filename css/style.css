@@ -11,12 +11,22 @@ kbd{
 	width: 4em;
 	height: 4em;
 	text-transform: uppercase;
+	position: relative;
+}
+kbd > button{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: none;
+}
+kbd:hover > button{
+	display: inline-block;
 }
 #main >div:nth-child(2){
 	margin-left: 2em;
 }
 #main > div:nth-child(3){
-	margin-left: 5em;
+	margin-left: 2em;
 }
 #main{
 	display: inline-block;
