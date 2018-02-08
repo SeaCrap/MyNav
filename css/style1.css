@@ -1,0 +1,25 @@
+body{
+	background: url(../imges/bg.jpg) center center no-repeat;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+#main kbd{
+	border: 1px solid #204d53;
+	display: inline-block;
+	width: 3em;
+	height: 3em;
+	background-color: rgba(178,190,194,0.5);
+	text-transform: uppercase;
+	font: 700 35px/3em "微软雅黑";
+	color: #fff;
+	margin: 5px;
+}
+#main{
+	text-align: center;
+	margin: 35% auto;
+}

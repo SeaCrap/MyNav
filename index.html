@@ -11,6 +11,7 @@
 		<div class="wrapper" id="main">
 			
 		</div>
+
 	</main>
 	<footer></footer>
 	<script type="text/javascript">
@@ -32,15 +33,22 @@
 		index1 = 0
 		while(index1 < keys['length']){
 			div = document.createElement('div')
+			div.className = 'rows'
 			main.appendChild(div)
 			row = keys[index1]
 			index2 = 0
 			while(index2 < row['length']){
 				kbd = document.createElement('kbd')
-				kbd.textContent = row[index2]
+				span = document.createElement('span')
+				span.textContent = row[index2]
+				kbd.appendChild(span)
+				span.className = 'text'
+				kbd.className = 'key'
 				button = document.createElement('button')
 				button.textContent = '编辑'
 				button.id = row[index2]
+				img = document.createElement('img')
+				img.src = 'http://' + hash[row[index2]] + '/favicon.ico'
 				button.onclick = function(xzkjcnxlkcjlk){
 					key = (xzkjcnxlkcjlk['target']['id'])
 					x = prompt('编辑一个网址加入收藏')
@@ -48,6 +56,7 @@
 					localStorage.setItem('zzz',JSON.stringify(hash))
 					console.log(hash)
 				}
+				kbd.appendChild(img)
 				kbd.appendChild(button)
 				div.appendChild(kbd)
 				index2 = index2+1

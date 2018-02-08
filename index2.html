@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+	<head></head>
+	<main>
+		<div id=main>
+			
+		</div>
+	</main>
+	<footer></footer>
+	<script>
+		//声明一个数组
+		var keys = {
+			'0':{0:'q',1:'w',2:'e',3:'r',4:'t',5:'y',6:'u',7:'i',8:'o',9:'p','length':10},
+			'1':{0:'a',1:'s',2:'d',3:'f',4:'g',5:'h',6:'j',7:'k',8:'l','length':9},
+			'2':{0:'z',1:'x',2:'c',3:'v',4:'b',5:'n',6:'m','length':7},
+			'length':3
+		}
+		//声明一个hash
+		var hash = {'q':'qq.com','w':'weibo.com','e':'e.com','r':'r.com'}
+		index1 = 0  //keys的外层第0个开始
+		//
+		while(index1 < keys['length']){
+			div = document.createElement('div')
+			main.appendChild(div)
+			row = keys[index1] // 第一个数组，第二个数组，第三个数组
+			// console.log(row)
+			index2 = 0
+			while(index2 < row['length']){
+				kbd = document.createElement('kbd')
+				kbd.textContent = row[index2]
+				div.appendChild(kbd)
+				index2 = index2 + 1
+			}
+			index1 = index1 + 1
+		}
+		document.onkeypress = function(xxx){
+			key = xxx['key']
+			website = hash[key]
+			// console.log(website)
+			// location.href = 'http://' + website
+			window.open('http://' + website,'_blank')
+		}
+	</script>
+</body>
+</html>

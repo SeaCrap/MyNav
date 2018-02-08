@@ -5,33 +5,70 @@
 a{
 	text-decoration: none;
 }
+body{
+	background-size: cover;
+	background: #ccc url(../imges/bg.jpg) center center no-repeat;
+}
+.wrapper > div:nth-child(2){
+	margin-left: 40px;
+}
+.wrapper > div:nth-child(3){
+	margin-left: 70px;
+}
+/*绝对居中*/
+main{
+	/*text-align: center;*/
+	height: 100vh; /*视口/浏览器窗口高度*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 kbd{
-	border: 1px solid blue;
+	text-transform: uppercase;	
+	width: 50px;
+	height: 35px;
 	display: inline-block;
-	width: 4em;
-	height: 4em;
-	text-transform: uppercase;
 	position: relative;
 }
 kbd > button{
+	display: none;
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	display: none;
 }
-kbd:hover > button{
-	display: inline-block;
+kbd:hover button{
+	display: block;
 }
-#main >div:nth-child(2){
-	margin-left: 2em;
+.wrapper .key{
+	width: 60px;
+	height: 42px;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: 0 0 0px 1px #ccc,0 3px 2px 1px rgba(08,08,08,0.4);
+	font: 18px "微软雅黑";
+	border: 1px solid #fff;
+	background: linear-gradient(to bottom, #fff 0%,#ccc 100%);
+	/*display: inline-flex;
+	align-items: center;
+	justify-content: center;*/
 }
-#main > div:nth-child(3){
-	margin-left: 2em;
+.wrapper .rows{
+	margin: 20px;
 }
-#main{
-	display: inline-block;
-	text-align: center;
+.rows .key{
+	margin: 0 10px;
+	position: relative;
 }
-main{
-	text-align: center;
+.key img{
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	left: 2px;
+	bottom: 2px;
+}
+.key .text{
+	position: absolute;
+	left:  2px;
+	top: -2px;
 }
