@@ -46,12 +46,12 @@ kbd:hover button{
 	color: #666;
 	border-radius: 5px;
 	box-shadow: 0 0 0px 1px #ccc,0 3px 2px 1px rgba(08,08,08,0.4);
-	font: 18px "微软雅黑";
+	font: 20px "微软雅黑";
 	border: 1px solid #fff;
 	background: linear-gradient(to bottom, #fff 0%,#ccc 100%);
-	/*display: inline-flex;
+	display: inline-flex;
 	align-items: center;
-	justify-content: center;*/
+	justify-content: center;
 }
 .wrapper .rows{
 	margin: 20px;
@@ -61,14 +61,15 @@ kbd:hover button{
 	position: relative;
 }
 .key img{
-	height: 16px;
-	width: 16px;
+	height: 15px;
+	width: 15px;
 	position: absolute;
 	left: 2px;
 	bottom: 2px;
+	border-radius: 7px;
 }
 .key .text{
-	position: absolute;
+/*	position: absolute;
 	left:  2px;
-	top: -2px;
+	top: -2px;*/
 }

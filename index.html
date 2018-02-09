@@ -48,7 +48,14 @@
 				button.textContent = '编辑'
 				button.id = row[index2]
 				img = document.createElement('img')
-				img.src = 'http://' + hash[row[index2]] + '/favicon.ico'
+				if(hash[row[index2]]){
+					img.src = 'http://' + hash[row[index2]] + '/favicon.ico'
+				}else{
+					img.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+				}
+				img.onerror = function(erer){
+					erer.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+				}
 				button.onclick = function(xzkjcnxlkcjlk){
 					key = (xzkjcnxlkcjlk['target']['id'])
 					x = prompt('编辑一个网址加入收藏')
@@ -69,7 +76,7 @@
 		 	website = hash[key]
 			console.log(website)
 			// location.href = website
-			window.open( website,'_blank')
+			window.open( 'http://' + website,'_blank')
 		}	
 	</script>
 </body>
