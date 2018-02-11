@@ -24,7 +24,7 @@
 		}
 //声明一个hash//
 		var hash = {
-			'q': 'http://qq.com','b': 'http://baidu.com','z': 'http://zhihu.com'
+			'q': 'qq.com','b': 'baidu.com','z': 'zhihu.com'
 		}
 		var hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
 		if(hashInLocalStorage){
@@ -57,11 +57,18 @@
 					erer.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
 				}
 				button.onclick = function(xzkjcnxlkcjlk){
-					key = (xzkjcnxlkcjlk['target']['id'])
-					x = prompt('编辑一个网址加入收藏')
-					hash[key] = x
+					button2 = xzkjcnxlkcjlk['target'] //用户点击的元素
+					img2 = button2.previousSibling  // 找到button2的哥元素给img2
+					key = button2['id']  //q w e r 
+					x = prompt('编辑一个网址加入收藏')  //用户输入网址
+					hash[key] = x  //hash地址变更
+					img2.src = 'http://' + x + '/favicon.ico' //变更后地址对应的favicon
+					//监听报错
+					img2.onerror = function(erer){
+						erer.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+					}
 					localStorage.setItem('zzz',JSON.stringify(hash))
-					console.log(hash)
+					// console.log(hash)
 				}
 				kbd.appendChild(img)
 				kbd.appendChild(button)
