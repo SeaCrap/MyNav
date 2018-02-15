@@ -30,6 +30,7 @@ kbd{
 	height: 35px;
 	display: inline-block;
 	position: relative;
+	margin: 0 10px;
 }
 kbd > button{
 	display: none;
@@ -53,11 +54,11 @@ kbd:hover button{
 	align-items: center;
 	justify-content: center;
 }
-.wrapper .rows{
+.wrapper .row{
 	margin: 20px;
 }
 .rows .key{
-	margin: 0 10px;
+	margin: 10px;
 	position: relative;
 }
 .key img{

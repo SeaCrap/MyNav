@@ -35,9 +35,11 @@
 		//遍历keys 生成kbd标签//	
 		index1 = 0
 		while(index1 < keys['length']){
-			div = tag('div',className:'rows')
-			// div.className = 'rows'
+			div = tag('div')
+			div.className = 'row'
+
 			main.appendChild(div)
+						
 			row = keys[index1]
 			index2 = 0
 			while(index2 < row['length']){
@@ -65,6 +67,7 @@
 					key = button2['id']  //q w e r 
 					x = prompt('编辑一个网址加入收藏')  //用户输入网址
 					hash[key] = x  //hash地址变更
+					console.log(hash[key])
 					img2.src = 'http://' + x + '/favicon.ico' //变更后地址对应的favicon
 					//监听报错
 					img2.onerror = function(erer){
@@ -97,14 +100,11 @@
 		// 	return document.createElement(tagName)
 		// }
 			//创建标签给class id textcontent等//
-		function tag(tagName,attributes){
-			var element = document.createElement(tagName)
-			//for…in遍历attributes 相当于一个hash attributes的key一个个拿出来//
-			for (var key in attributes){  //key为classname id textcontent…
-				element[key] = attributes[key]
-			} 
-			return element
-		}			
+		function tag(tagName){
+			return document.createElement(tagName)
+
+		} 
+				
 	</script>
 </body>
 </html>
